@@ -1,0 +1,38 @@
+{
+  "name": "monaco-css-linter",
+  "version": "1.0.0",
+  "description": "Simple CSS Linter for the Monaco Editor.",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnaudpfu/monaco-css-linter.git"
+  },
+  "keywords": [
+    "CSS",
+    "linter",
+    "monaco",
+    "editor",
+    "w3c",
+    "cssValidator"
+  ],
+  "author": "Arnaud Pfundstein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arnaudpfu/monaco-css-linter/issues"
+  },
+  "homepage": "https://github.com/arnaudpfu/monaco-css-linter#readme",
+  "dependencies": {
+    "monaco-editor": "^0.33.0",
+    "w3c-css-validator": "^1.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
