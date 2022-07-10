@@ -20,7 +20,7 @@ export class CSSMonacoMarks {
     }
 
     public async requestLint(): Promise<ValidateTextResultWithoutWarnings> {
-        return cssValidator.validateText(this.css).then((result) => {
+        return cssValidator.validateText(this.css, this.options).then((result) => {
             this.linterResponse = result;
             return this.linterResponse;
         });
