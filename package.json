@@ -1,6 +1,6 @@
 {
   "name": "monaco-css-linter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple CSS Linter for the Monaco Editor.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -8,6 +8,9 @@
     "lib/**/*"
   ],
   "scripts": {
+    "build": "npx tsc",
+    "build-demo": "webpack --mode=production",
+    "start-demo": "webpack -w --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,6 +36,11 @@
     "w3c-css-validator": "^1.3.0"
   },
   "devDependencies": {
-    "typescript": "^4.7.4"
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-loader": "^8.2.5",
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

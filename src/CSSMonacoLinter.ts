@@ -17,11 +17,12 @@ export class CSSMonacoLinter {
 
     public lint() {
         const code = this.editor.getValue();
+        if (code === '') return;
         const languageID = this.editor.getModel()?.getLanguageId();
         if (languageID === 'css') {
             const model = this.editor.getModel();
             if (model === null) {
-                throw new Error("Your model still does't exist.");
+                throw new Error("Your model still doesn't exist.");
             }
             const monacoLinter = new CSSMonacoMarks(code, this.options, model);
             monacoLinter.getEditorMarks(this.monaco).then((issues) => {
